@@ -2,47 +2,37 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Scalable E-commerce API",
-    description: "Complete backend system for e-commerce with microservices, payment processing, inventory management and recommendation system. Supports over 10k requests per second.",
-    tech: ["Go", "PostgreSQL", "Redis", "Kafka", "Docker"],
-    image: "https://images.unsplash.com/photo-1565687981296-535f09db714e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWNrZW5kJTIwY29kZSUyMHNlcnZlcnxlbnwxfHx8fDE3NjcwNjAwMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    github: "https://github.com",
-    demo: "#",
+    title: "Nankion",
+    description: "A Go CLI tool that parses OFX (Open Financial Exchange) bank statements and syncs them to Notion databases. Perfect for personal finance tracking and automating bank statement management.",
+    tech: ["Go", "Notion API", "OFX", "CLI"],
+    image: "https://thetechblink.com/wp-content/uploads/2025/06/notion_logo.jpg",
+    github: "https://github.com/rodrigoTcarmo/nankion",
   },
   {
-    title: "Real-Time Analytics Platform",
-    description: "Real-time data processing system with ETL pipelines, aggregations and visualizations. Processes millions of events daily with sub-second latency.",
-    tech: ["Python", "Apache Spark", "Elasticsearch", "AWS", "Airflow"],
-    image: "https://images.unsplash.com/photo-1647098111478-fe6aaaf0bcf3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcGklMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzY3MDYwMDM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    title: "ForgedCat",
+    description: "A modular and scalable CI/CD platform integrated with GitHub and built on Tekton Pipelines.",
+    tech: ["Go", "Kubernetes", "CI/CD", "Tekton", "GitHub API"],
+    image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*wo3QT530IgEeB2RFYFU_aQ.png",
     github: "https://github.com",
-    demo: "#",
-  },
-  {
-    title: "API Gateway & Auth Service",
-    description: "Centralized gateway for API management with rate limiting, JWT authentication, OAuth2, and monitoring. Includes granular role-based permissions system.",
-    tech: ["Node.js", "TypeScript", "MongoDB", "Redis", "Kubernetes"],
-    image: "https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNjcwNTg2OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    github: "https://github.com",
-    demo: "#",
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-950">
+    <section id="projects" className="py-20 px-4 bg-slate-900">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl text-center mb-4 text-white">
           Featured Projects
         </h2>
         <p className="text-center text-slate-400 mb-16 max-w-2xl mx-auto">
-          Some of the main projects I've developed, demonstrating expertise in systems architecture and backend
+          Some of the main projects I've developed
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:shadow-green-500/20 transition-all group border border-slate-800 hover:border-green-500"
+              className="bg-slate-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:shadow-orange-500/20 transition-all group border border-slate-800 hover:border-orange-500"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -65,7 +55,7 @@ export function Projects() {
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-green-500/10 text-green-400 rounded-full text-sm border border-green-500/20"
+                      className="px-3 py-1 bg-orange-500/10 text-orange-400 rounded-full text-sm border border-orange-500/20"
                     >
                       {tech}
                     </span>
@@ -77,19 +67,10 @@ export function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-slate-300 hover:text-green-500 transition-colors"
+                    className="flex items-center gap-2 text-slate-300 hover:text-orange-500 transition-colors"
                   >
                     <Github className="w-5 h-5" />
                     <span>Code</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-slate-300 hover:text-green-500 transition-colors"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    <span>Demo</span>
                   </a>
                 </div>
               </div>

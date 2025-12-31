@@ -1,4 +1,4 @@
-import image_d5c1d579bfa46b65682239da3fd60e02ecc09f93 from 'figma:asset/d5c1d579bfa46b65682239da3fd60e02ecc09f93.png';
+import profilePic from '@/assets/profile_pic.jpeg';
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 export function Hero() {
@@ -9,7 +9,7 @@ export function Hero() {
           {/* Left side - Content */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl mb-4 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 pb-1 leading-normal bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                 Rodrigo Carmo
               </h1>
               <p className="text-2xl md:text-3xl text-slate-300 mb-6">
@@ -18,8 +18,7 @@ export function Hero() {
             </div>
 
             <p className="text-lg text-slate-400 leading-relaxed">
-              Full-stack developer with over 8 years of experience building robust systems, 
-              high-performance APIs and scalable solutions for tech companies.
+              Hi! I'm Rodrigo Carmo, a Senior Software Engineer with 8+ years of experience in backend development using Go and Python, and in cloud-native infrastructure and platform engineering with Kubernetes, Docker, AWS, Azure, and Terraform.
             </p>
 
             {/* Social Media & CTA Buttons */}
@@ -84,8 +83,8 @@ export function Hero() {
           {/* Right side - Profile Picture */}
           <div className="flex justify-center lg:justify-end bg-[rgba(0,0,0,0)]">
             <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-4 border-orange-500 shadow-2xl shadow-orange-500/20">
-              <img 
-                src={image_d5c1d579bfa46b65682239da3fd60e02ecc09f93}
+              <img
+                src={profilePic}
                 alt="Rodrigo Carmo"
                 className="w-full h-full object-cover"
               />
