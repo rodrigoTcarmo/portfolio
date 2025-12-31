@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   // Base path for GitHub Pages - use '/' for root domain or '/repo-name/' for project pages
-  base: '/',
+  base: '/portfolio/',
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them
