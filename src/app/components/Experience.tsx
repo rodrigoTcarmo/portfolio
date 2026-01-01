@@ -57,7 +57,7 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-black from-slate-950 via-slate-900 to-slate-950">
+    <section id="experience" className="py-20 px-4 bg-gradient-to-br from-black from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl text-center mb-4 text-white">
           Professional Experience
@@ -70,7 +70,7 @@ export function Experience() {
           {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-orange-500/20 transform md:-translate-x-1/2" />
 
-          <div className="space-y-12">
+          <div className="space-y-0">
             {experiences.map((exp, index) => (
               <div
                 key={index}
