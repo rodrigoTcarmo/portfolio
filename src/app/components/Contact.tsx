@@ -14,7 +14,7 @@ export function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <a
-            href="mailto:seu.email@exemplo.com"
+            href="mailto:rod.carmo@outlook.com"
             className="flex items-center gap-4 p-6 bg-slate-900 rounded-xl hover:bg-slate-800 transition-colors border border-slate-800 hover:border-orange-500"
           >
             <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-orange-500/20">
@@ -22,12 +22,12 @@ export function Contact() {
             </div>
             <div className="text-left">
               <div className="text-sm text-slate-400">Email</div>
-              <div>seu.email@exemplo.com</div>
+              <div>rod.carmo@outlook.com</div>
             </div>
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/rodrigotcarmo/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-6 bg-slate-900 rounded-xl hover:bg-slate-800 transition-colors border border-slate-800 hover:border-orange-500"
@@ -37,12 +37,12 @@ export function Contact() {
             </div>
             <div className="text-left">
               <div className="text-sm text-slate-400">LinkedIn</div>
-              <div>/in/seu-perfil</div>
+              <div>/in/rodrigotcarmo</div>
             </div>
           </a>
 
           <a
-            href="https://github.com"
+            href="https://github.com/rodrigoTcarmo"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-6 bg-slate-900 rounded-xl hover:bg-slate-800 transition-colors border border-slate-800 hover:border-orange-500"
@@ -52,24 +52,29 @@ export function Contact() {
             </div>
             <div className="text-left">
               <div className="text-sm text-slate-400">GitHub</div>
-              <div>@seu-usuario</div>
+              <div>@rodrigoTcarmo</div>
             </div>
           </a>
 
-          <div className="flex items-center gap-4 p-6 bg-slate-900 rounded-xl border border-slate-800">
+          <a
+            href="https://earth.google.com/web/@-22.96673845,-43.15847532,1.58816942a,5732.62690213d,35y,107.26381012h,82.61129522t,360r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-6 bg-slate-900 rounded-xl hover:bg-slate-800 transition-colors border border-slate-800 hover:border-orange-500"
+          >
             <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-orange-500/20">
               <MapPin className="w-6 h-6 text-orange-500" />
             </div>
             <div className="text-left">
               <div className="text-sm text-slate-400">Location</div>
-              <div>San Francisco, CA</div>
+              <div>Rio de Janeiro, RJ</div>
             </div>
-          </div>
+          </a>
         </div>
 
         <div className="pt-8 border-t border-slate-800">
           <p className="text-slate-400">
-            © 2024 All rights reserved.
+            © 2026 Rodrigo Carmo.
           </p>
         </div>
       </div>
