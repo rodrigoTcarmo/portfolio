@@ -4,34 +4,53 @@ const experiences = [
   {
     role: "Senior Software Engineer",
     company: "Nubank",
-    period: "2021 - Present",
-    description: "Technical leadership in developing microservices and APIs. Redesigned the main system architecture, resulting in 40% performance improvement. Mentoring a team of 5 developers.",
-    achievements: [
-      "Implementation of event-driven architecture with Kafka",
-      "30% reduction in infrastructure costs",
-      "Creation of internal framework for APIs",
+    period: "2022 - Present",
+    description: "Working on large-scale cloud-native platforms using Go, Kubernetes, and AWS. I contribute to the design and operation of high-throughput EKS clusters and CI/CD platforms, focusing on scalability, reliability, cost optimization, and observability through infrastructure as code and GitOps practices.",
+    skills: [
+      "Go",
+      "Kubernetes",
+      "AWS",
+      "Terraform",
+      "Prometheus",
+    ],
+
+  },
+  {
+    role: "Site Reliability Engineer (SRE)",
+    company: "Pag Seguro (UOL Group)",
+    period: "2021 - 2022",
+    description: "Worked on the PagSeguro brokerage platform, developing scalable backend microservices in Python and architecting cloud-native Kubernetes infrastructure on AWS.",
+    skills: [
+      "Python",
+      "Kubernetes",
+      "AWS",
+      "Terraform",
+      "Jenkins",
     ],
   },
   {
-    role: "Software Engineer",
-    company: "Digital Innovations",
-    period: "2018 - 2021",
-    description: "Development of RESTful APIs and GraphQL for web and mobile applications. Implementation of CI/CD pipelines and infrastructure automation.",
-    achievements: [
-      "Migration from monolith to microservices",
-      "Implementation of automated tests (85% coverage)",
-      "SQL query optimization with 60% response time reduction",
+    role: "DevOps Engineer",
+    company: "Ativa Investimentos",
+    period: "2019 - 2021",
+    description: "Developed and deployed backend automations using Python and Docker, created Azure CI/CD pipelines, and implemented monitoring using Dynatrace. Hands-on experience operating hybrid infrastructure, from VMware-based Windows Server data centers to cloud environments.",
+    skills: [
+      "Python",
+      "Docker",
+      "Azure",
+      "Dynatrace",
+      "Linux",
     ],
   },
   {
-    role: "Backend Developer",
-    company: "StartUp XYZ",
-    period: "2016 - 2018",
-    description: "Backend feature development for SaaS platform. Direct work with databases, cache and performance optimization.",
-    achievements: [
-      "Development of real-time notification system",
-      "Implementation of Redis cache",
-      "Integration with multiple third-party APIs",
+    role: "IT Support Technician",
+    company: "Ativa Investimentos",
+    period: "2017 - 2019",
+    description: "Worked as an IT Support Technician, providing end-user and infrastructure support across multiple offices. Supported 300+ workstations, handled hardware, software, and network issues, and improved asset inventory and documentation. Also assisted with user account management and access control in enterprise environments.",
+    skills: [
+      "Linux",
+      "Windows Server",
+      "Active Directory",
+      "Cisco",
     ],
   },
 ];
@@ -71,24 +90,26 @@ export function Experience() {
                     <h3 className="text-2xl text-white mb-1">
                       {exp.role}
                     </h3>
-                    <div className="flex items-center gap-2 text-orange-400 mb-4">
-                      <Briefcase className="w-5 h-5" />
-                      <span>{exp.company}</span>
+                    <div className={`flex flex-col gap-2 mb-4 ${index % 2 === 0 ? "md:items-end" : ""}`}>
+                      <div className="flex items-center gap-2 text-orange-400">
+                        <Briefcase className="w-5 h-5" />
+                        <span className="font-semibold">{exp.company}</span>
+                      </div>
+                      <div className={`flex flex-wrap gap-1.5 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+                        {exp.skills.map((skill, skillIndex) => (
+                          <span
+                            key={skillIndex}
+                            className="px-2 py-0.5 bg-orange-500/10 text-orange-300 rounded text-xs border border-orange-500/20"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                     <p className="text-slate-400 mb-4">
                       {exp.description}
                     </p>
-                    <ul className="space-y-2">
-                      {exp.achievements.map((achievement, achIndex) => (
-                        <li
-                          key={achIndex}
-                          className="text-slate-400 text-sm flex items-start gap-2"
-                        >
-                          <span className="text-orange-500 mt-1">•</span>
-                          <span>{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
+
                   </div>
                 </div>
 
