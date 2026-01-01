@@ -3,6 +3,7 @@ import { Github, ExternalLink } from "lucide-react";
 const projects = [
   {
     title: "Nankion",
+    status: "Done",
     description: "A Go CLI tool that parses OFX (Open Financial Exchange) bank statements and syncs them to Notion databases. Perfect for personal finance tracking and automating bank statement management.",
     tech: ["Go", "Notion API", "OFX", "CLI"],
     image: "https://thetechblink.com/wp-content/uploads/2025/06/notion_logo.jpg",
@@ -10,6 +11,7 @@ const projects = [
   },
   {
     title: "ForgedCat",
+    status: "In Progress",
     description: "A modular and scalable CI/CD platform integrated with GitHub and built on Tekton Pipelines.",
     tech: ["Go", "Kubernetes", "CI/CD", "Tekton", "GitHub API"],
     image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*wo3QT530IgEeB2RFYFU_aQ.png",
@@ -44,9 +46,20 @@ export function Projects() {
               </div>
 
               <div className="p-6">
-                <h3 className="text-2xl mb-3 text-white">
-                  {project.title}
-                </h3>
+                <div className="flex items-center gap-3 mb-3">
+                  <h3 className="text-2xl text-white">
+                    {project.title}
+                  </h3>
+                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full shrink-0" />
+                  <span
+                    className={`px-3 py-1 rounded-full text-sm border ${project.status === "Done"
+                      ? "bg-green-500/10 text-green-400 border-green-500/20"
+                      : "bg-blue-500/10 text-blue-400 border-blue-500/20"
+                      }`}
+                  >
+                    {project.status}
+                  </span>
+                </div>
                 <p className="text-slate-400 mb-4">
                   {project.description}
                 </p>
