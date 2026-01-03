@@ -12,10 +12,26 @@ const projects = [
   {
     title: "ForgedCat",
     status: "In Progress",
-    description: "A modular and scalable CI/CD platform integrated with GitHub and built on Tekton Pipelines.",
+    description: "A modular and scalable CI/CD platform integrated with GitHub and built on Tekton Pipelines and Kubernetes.",
     tech: ["Go", "Kubernetes", "CI/CD", "Tekton", "GitHub API"],
     image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*wo3QT530IgEeB2RFYFU_aQ.png",
-    github: "https://github.com",
+    github: "https://github.com/rodrigoTcarmo/forgedcat",
+  },
+  {
+    title: "Inkion",
+    status: "In Progress",
+    description: "Inkion is an automation tool that scans your email inbox to detect financial transaction notifications and automatically records them as structured entries in a Notion database.",
+    tech: ["Go", "Kubernetes", "Kustomize", "Notion API", "IMAP"],
+    image: "https://t2.tudocdn.net/732936?w=824&h=494",
+    github: "https://github.com/rodrigoTcarmo/inkion",
+  },
+  {
+    title: "Philosopher BOT",
+    status: "Done",
+    description: "Philosopher Bot is a social media bot that takes any text and transforms it into a quote attributed to a random philosopher. The bot creates stylized images combining user-provided text with philosopher portraits.",
+    tech: ["Python", "Docker", "API", "Pandas", "Pillow"],
+    image: "https://pbs.twimg.com/profile_images/1317267570173595655/d21DB2ho_400x400.jpg",
+    github: "https://github.com/rodrigoTcarmo/The-Philosopher-BOT",
   },
 ];
 
