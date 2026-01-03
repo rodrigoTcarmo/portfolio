@@ -82,7 +82,7 @@ export function Hero() {
                 { value: "28", label: "Age" },
                 { value: "9", label: "Years of Experience" },
                 { value: "1k+", label: "GitHub Contributions" },
-                { value: "2+", label: "Personal Projects" },
+                { value: "4+", label: "Personal Projects" },
               ].map((stat, index) => (
                 <div
                   key={index}
